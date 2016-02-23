@@ -1,0 +1,203 @@
+/*
+Theme Name: Twenty Thirteen
+Theme URI: https://wordpress.org/themes/twentythirteen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready, accessibility-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Repeatable Patterns
+ * 3.0 - Basic Structure
+ * 4.0 - Header
+ *   4.1 - Site Header
+ *   4.2 - Navigation
+ * 5.0 - Content
+ *   5.1 - Entry Header
+ *   5.2 - Entry Meta
+ *   5.3 - Entry Content
+ *   5.4 - Galleries
+ *   5.5 - Post Formats
+ *   5.6 - Attachments
+ *   5.7 - Post/Paging Navigation
+ *   5.8 - Author Bio
+ *   5.9 - Archives
+ *   5.10 - Search Results/No posts
+ *   5.11 - 404
+ *   5.12 - Comments
+ *   5.13 - Multisite
+ * 6.0 - Sidebar
+ *   6.1 - Widgets
+ * 7.0 - Footer
+ * 8.0 - Media Queries
+ * 9.0 - Print
+ * ----------------------------------------------------------------------------
+ */
+
+
+/**
+ * 1.0 Reset
+ *
+ * Modified from Normalize.css to provide cross-browser consistency and a smart
+ * default styling of HTML elements.
+ *
+ * @see http://git.io/normalize
+ * ----------------------------------------------------------------------------
+ */
+@charset "utf-8";
+/* CSS Document */
+
+img{ width:auto; max-width:100%; border:none;}
+body{ margin:0; padding:0; background:#FFF; font-family:Arial, Helvetica, sans-serif; overflow-x:hidden}
+.header_main{ width:100%; height:auto;  background:#fff}
+.logo{margin: 10px 0 10px 0; }
+
+.banner{ width:100%; height:auto; float:left;}
+.banner img{ width:100%; }
+
+.product{ width:100%; height:auto; text-align:center; float:left; }
+.product p{color:#000; font-size:16px; padding:0 20px 0 20px; margin:10px 0 10px 0}
+
+.products_image{ width:100%; height:auto; margin:10px 0 10px 0}
+
+.review{width:100%; height:auto; float:left;  background:url(images/review.jpg) no-repeat; padding:150px; margin: 30px 0}
+.review p{color:#FFF; font:Arial, Helvetica, sans-serif; font-size:18px; text-align:center; margin:0  10px 0 10px}
+
+.toppings_spl{width:100%; height:auto; text-align:center; font-size:30px; color:#000;}
+.toppings_spl h4{color:#000;}
+.toppings_spl p{color:#000; font-size: 18px; padding:40px 0 40px 0; text-align:center ; margin:10px 10px10px 10px}
+
+.top_image{width:100%; height:auto; margin:30px 30px; }
+.top_image h4{color:#000;}
+.top_image p{ color:#000; text-align:center; font-size:12px}
+
+.different_types{width:100%; height:auto; color:#fff; text-align:center; font-size:30px; background:url(images/difftype.jpg) no-repeat; padding:150px; }
+.different_types p1{color:#FFF; font-size:18px; text-align:center; margin:0 10px 0 10px; padding: 10px 0 10px 0}
+
+
+.offer{width:100%; height:auto; text-align:center; font-size:30px; color:#000;}
+.offer h4{text-align:center; color:#000;}
+.offer p{ color:#000; font-size:16px; }
+
+.offer_image p{ font-size:18px; color:#000; text-align:left; padding: 30px 0 20px 0}
+
+.our_chef{width:100%; height:auto; color:#000; font-size:30px; text-align:center; }
+.our_chef h4{color:#000;margin:40px 0 40px 0 }
+.our_chef p{color:#000; font-size:14px;  margin:15px 0 15px 0}
+
+
+.types{width:100%; height:auto; text-align:center; margin: 0 10px 0 10px}
+.types h4{color:#000; margin:15px 0 15px 0;}
+.types p{color:#000; margin:0 20px 0 20px; padding:10px 0 10px 0}
+
+.clients{width:100%; height:auto; }
+.clients h3{color:#000; text-align:center}
+
+
+.footer{width:100%; height:auto; background-color:#666; padding:50px 0 50px 0; margin:10px 0 0 0; float:left}
+.footer h4{color:#fff;}
+.footer p{color:#fff; text-align: center}
+
+.footer_bottom{width:100%; height:auto; background:#000; float:left}
+.footer_bottom p {color:#FFF; font-size:10px; text-align:center; padding:10px 0 10px 0}
+
+.about_us_page{width:100%; height:auto; }
+.about_us_page h1{ color:#333; font-size: 70px; font-weight:bold; text-align:center; }
+.about_us_page p{color:#000; font-size:18px; text-align:justify; padding:40px 0 40px 0 ; float:left}
+
+.designs{width:100%; height:auto; }
+.designs h1{color:#333; font-size:70px; font-weight:bold; text-align:left}
+.designs h4{color:#333; text-align:left; font-size:30px; font-family:Arial, Helvetica, sans-serif; margin:30px 0 30px 0 }
+.designs p {width:700px; height:auto; text-align:justify; padding: 5px 5px 5px 5px; font-size:18px}
+
+.exp {width 100%; height:auto; margin:30px 0 30px 0}
+.exp p{font-size:18px;text-align: justify; padding:10px 0 10px 0}
+.exp h1{color:#333; text-align: left; margin: 0 40px 0 40px; font-size:50px}
+
+.our_services{width:100%; height:auto;}
+.our_services h1{color:#333; text-align:center; font-size:70px; }
+.our_services p{color:#000; font-size:20px; padding: 30px 0 30px 0 }
+
+.orders h4{color:#d11340; font-size:30px;}
+.orders p{color:#000; text-align:justify; margin:0 40px 0 40px; font-size:16px}
+
+.orders1 h4{color:#d11340; font-size:30px; text-align:center}
+.orders1 p{color:#000; text-align: justify; margin:0 40px 0 40px; font-size:16px}
+
+.menu_items{width:100%; height:auto}
+.menu_items h1{ color:#333; font-size:70px; text-align: center}
+.menu_items ul{color:#333; text-align:left; margin: 0 20px 0 20px; padding: 10px 0 10px 0; }
+.menu_items ul li{color:#333;}
+.menu_items ul a{color:#333; font-size:30px;text-align:left }
+
+.portfolio{width:100%; height:auto; }
+.portfolio h1{color:#333; font-size:70px; text-align: center}
+.portfolio p{ color:#333; font-size:14px; text-align: justify}
+
+.toppings{ width:100%; height:auto}
+.toppings h1{color:#333; font-size:70px; text-align: center; padding: 0 20px 0 20px}
+.toppings p{color:#333; font-size:18px; text-align: justify; }
+
+.footer{ width:100%; height:auto}
+.footer h4{color:#fff; font-size:20px; text-align: center;}
+.footer p{color:#fff; text-align: center}
+
+.contacts{ width:100%; height:auto; }
+.contacts h1{color:#333; text-align:center ; font-size:70px; padding:10px 0 10px 0}
+.contacts form{text-align:left; }
+.bxslider { text-align:center}
+
+.bxslider p{ position:absolute; text-align:center;}
+
+
+.enquiry_form {
+	height: auto;
+	margin: 5px 0 30px;
+	width: auto;
+}
+.enquiry_form input, .enquiry_form textarea {
+	border: 1px solid #e3e3e3;
+	float: left;
+	color:#6e6d6d;
+	font-size: 13px;
+	margin: 4px 0 7px 0px;
+	padding: 6px 0 8px 5px;
+	width: 93%;
+}
+.enquiry_form textarea {
+	height:64px;
+	font-family: 'Open Sans';
+}
+.enquiry_form input[type="submit"] {
+	background:#303030;
+	border: medium none;
+	border-radius: 0 ;
+	color: #FFFFFF;
+	cursor: pointer;
+	float: left;
+
+	margin: 0 0 0 0px;
+	width: 86px 
+}
+.enquiry_form input[type="submit"]:hover {
+	background:#BA2708;
+}
+.error {
+    color: #FF0000;
+     width:100%;
+	 float:left;
+    font-size: 12px;
+}
+.sucmsg{ width:285px !important; color:#060 !important;}
